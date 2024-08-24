@@ -4,3 +4,8 @@ Open source library for building User Interface.
 --> Focus on UI
 --> It has Component Base Rrchitecture
 --> It is declarative: Tell react what we want and it will build actual UI.
+
+
+2. Component: It describe the part of the UI.
+    1. Stateless Function Component: Javascript function which return HTML that describe UI.
+    2. Stateful Class Component: Class extend Component Class and render method returns HTML.
