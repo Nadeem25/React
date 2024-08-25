@@ -5,6 +5,7 @@ import ClassComp from './components/ClassComponent';
 import State from "./components/State"
 import EventHandling from './components/EventHandling';
 import EventBind from './components/EventBind';
+import ParentComponent from './components/ParentComponent';
 
 function App() {
   console.log(`Inside in App Component`);
@@ -20,6 +21,8 @@ function App() {
       <EventHandling/>
       <h3>----------------------------Event Binding------------------------------------------------------</h3>
       <EventBind/>
+      <h3>----------------------------Parent-Child Relation----------------------------------------------</h3>
+      <ParentComponent/>
     </div>
   );
 }

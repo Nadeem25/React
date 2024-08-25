@@ -20,7 +20,7 @@ export class EventBind extends Component {
     }
 
     render() {
-        // console.log(`INside render`);
+        //console.log(`INside Event Bind Render`);
         
         return (
             <div>
