@@ -6,11 +6,17 @@ import State from "./components/State"
 import EventHandling from './components/EventHandling';
 import EventBind from './components/EventBind';
 import ParentComponent from './components/ParentComponent';
+import ConditionalRendering from './components/ConditionalRendering';
+import FormComponent from './components/FormComponent';
 
 function App() {
   console.log(`Inside in App Component`);
   return (
     <div className="App">
+      <h3>----------------------------Form Control-------------------------------------------------------</h3>
+      <FormComponent />
+      <h3>----------------------------List Rendering-----------------------------------------------------</h3>
+      <ConditionalRendering/>
       <h3>--------------------------------State----------------------------------------------------------</h3>
       <State />
       <h3>----------------------------Functional Component-----------------------------------------------</h3>
