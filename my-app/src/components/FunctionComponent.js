@@ -1,7 +1,7 @@
 import React  from "react";
 
-function FunctionComp() {
-    return <h1>Function Component</h1>
+function FunctionComp(props) {
+    return <h1>Function Component: {props.name}</h1>
 }
 
 export default FunctionComp

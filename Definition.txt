@@ -9,3 +9,5 @@ Open source library for building User Interface.
 2. Component: It describe the part of the UI.
     1. Stateless Function Component: Javascript function which return HTML that describe UI.
     2. Stateful Class Component: Class extend Component Class and render method returns HTML.
+
+
