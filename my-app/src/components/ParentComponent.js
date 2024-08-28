@@ -1,12 +1,16 @@
 import React, { Component } from 'react'
 import ChildComponent from './ChildComponent'
+import RegularComponent from './RegularComponent'
+import PureComp from './PureComp'
 
 export default class ParentComponent extends Component {
     constructor(props) {
       super(props)
     
       this.state = {
-         parentName: "parent"
+         parentName: "parent",
+         name: 'Mark'
+
       }
       this.greetParent = this.greetParent.bind(this)
     }
@@ -19,12 +23,23 @@ export default class ParentComponent extends Component {
         })
         
     }
+
+    // componentDidMount() {
+    //   setInterval(() =>{
+    //     this.setState({
+    //       name: 'John'
+    //     })
+    //   }, 2000)
+    // }
     
   render() {
+    console.log(`Inside Parent Component Render()`);
     return (
       <div>
         {/* Passing function as properties to chile component from parent component */}
-        <ChildComponent greetHandler={this.greetParent}/>
+        {/* <ChildComponent greetHandler={this.greetParent}/> */}
+        <RegularComponent name = {this.state.name}/>
+        <PureComp name = {this.state.name}/>
       </div>
     )
   }

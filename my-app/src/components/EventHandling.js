@@ -23,7 +23,7 @@ import React, { Component } from 'react'
 
 export class EventHandling extends Component {
     clickHandler() {
-        console.log(`Event has clicked`);
+        //console.log(`Event has clicked`);
     }
 
     render() {

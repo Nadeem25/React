@@ -2,7 +2,7 @@
 Open source library for building User Interface.
 --> Not Framework
 --> Focus on UI
---> It has Component Base Rrchitecture
+--> It has Component Base Architecture
 --> It is declarative: Tell react what we want and it will build actual UI.
 
 
@@ -10,4 +10,17 @@ Open source library for building User Interface.
     1. Stateless Function Component: Javascript function which return HTML that describe UI.
     2. Stateful Class Component: Class extend Component Class and render method returns HTML.
 
+3. Higher Order Component
+We use Higher Order Component to share common functionality between component
+HOC: Function takes component as an argument and returns a new call.
+const newComponent = higherOrderComponent(originalComponetn)
+Eg. const IronMan = withSuit(TonyStark)
+
+
+4. render props: We use render props to share common functionaliy and props between components.
+
+5. Context: It provides a way to pass data through the components tree without having to pass props down manually at entry level.
+  step 1: Create Context
+  step 2: Provide a context value
+  step 3: Consume the context value
 

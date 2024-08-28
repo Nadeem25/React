@@ -4,7 +4,7 @@ class State extends Component {
 
     constructor() {
         super()
-        console.log("Inside Class Base State Component");
+        //console.log("Inside Class Base State Component");
         this.state = {
             message: "Subscribe To Learn State",
             count: 0
