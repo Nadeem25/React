@@ -24,3 +24,24 @@ Eg. const IronMan = withSuit(TonyStark)
   step 2: Provide a context value
   step 3: Consume the context value
 
+6. Rules Of Hook
+--> Only call Hooks at the Top Level
+Dont call Hooks inside loops, conditions or nested function
+
+--> Only Call Hooks from React Functions
+Call them from within React Functional Components and not just any regular javascript function
+
+7. Summary of Hooks
+1. The useState hook let us add state to functional component
+2. In classes, the state is always an object, but with useState hook the state does not have to be an object
+3. It return an array with 2 elements
+4. 1st element is the current value of state and 2nd element is state setter function.
+
+Types of Hooks
+1. useState
+2. UseEffect
+3. UseContext
+4. UseReducer
+
+
+
