@@ -42,6 +42,50 @@ Types of Hooks
 2. UseEffect
 3. UseContext
 4. UseReducer
+5. useMemo
+6. useRef
+7. useCallback
+
+
+8. Re-render Scenario
+  1. Render Phase
+    step 1. Find all elements flagged for updates
+    step 2. for each flagged component, convert JSX to react element and store the result
+    step 3. Peform reconciliation- Differing the old and new tree of React element (a.k.a Virtual DOM)
+  2. Commit Phase 
+    stpe 1. Apply changes to the DOM
+
+8.1. useState Hook
+  Point 1: After the initial render(Value is 0) when will update the same value(Value is 0) then the component will not re-render.
+  Point 2: After the component re-render(value from 0 to 5) if we set the same state  value(Value is 5) then component will re-render.
+    If you again set the state value (value is 5) then component will not render.
+
+8.2. useReduer Hook
+  Point 1: After the initial render(Value is 0) when will update the same value(Value is 0) then the component will not re-render.
+  Point 2: After the component re-render(value from 0 to 5) if we set the same state value(Value is 5) then component will re-render.
+    If you again set the state value (value is 5) then component will not render.
+
+8.3. State Immutability (Object useState Hook)
+  Point 1: Mutating object or an array as state will not cause re-render when used with useState or useReducer hook
+  Point 2: To re-render, make a copy of the existing state, modify as necessary and then pass the new state to the setter function or while returning from Reducer function.
+  Point 3: Directly mutating is an easy way to create bug in application. 
+
+8.4. Parent Child and Render
+  Case 1: New State is different from old state
+    Point 1: Both Parent and Child component re-render
+  Case 2: New State is same as the Old State
+    Point 1: After the initial render: After the initial render(Value is 0) when will update the same value(Value is 0) then the both Parent and Child component will not re-render.
+    Point 2: After the re-render: After the component re-render (value change from 0 to 5), if we set the same value (value 5) then only Parent Component re-render on more time but not child component
+    Point 3: Component will re-render when state will change. Component can change its state but not Props
+
+8.5. React.Memo
+  Point 1: In React, when Parents Comp renders , a child comp might unnecerssarily render. To optimize above behaviour, we can use React.Memo and pass in the child component.
+    React.memo will perform a shallow comparison of the previous and new props and re-render the child component only if the props have changed.
+
+  ============= Dont Do This ====================================
+  Point 2: There is no need to wrap child component with React momo if child component itself has children component.
+  Point 3: If parent component has object or function and wrapping one of its child component with React.memo (Passing object or function as props to child comp) so it is incorrect of memoization.
+  
 
 
 

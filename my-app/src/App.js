@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import React from 'react';
 import FunctionComp from './components/FunctionComponent';
 import ClassComp from './components/ClassComponent';
 import State from "./components/State"
@@ -16,11 +17,16 @@ import ComponentA from './components/Context/ComponentA';
 import HookCounter from './components/Hooks/UseStateHook';
 import UseEffectHook from './components/Hooks/UseEffectHook';
 import IntervalHookCounter from './components/Hooks/IntervalHookCounter';
-import React from 'react';
 import UseContext from './components/Hooks/UseContext';
 import UseReducer from './components/Hooks/UseReducer';
 import CounterComp from './components/Hooks/Context-Reducer/CounterComp';
 import DataFetchingComp from './components/Hooks/DataFetchingComp';
+import UseMemoComp from './components/Hooks/UseMemoComp';
+import CounterOneComp from './components/Hooks/CustomHook/CounterOneComp';
+import CounterTwoComp from './components/Hooks/CustomHook/CounterTwoComp';
+import ObjectUseState from './components/React-Rendering/ObjectUseState';
+import RenderParentComponent from './components/React-Rendering/Parent-Child/RenderParentComponent';
+
 
 export const UserContext = React.createContext()
 export const ChannelContext = React.createContext()
@@ -29,6 +35,15 @@ function App() {
   //console.log(`Inside in App Component`);
   return (
     <div className="App">
+      <h3>--------------------------------React Rending using Parent-Child-------------------------------------------------------------</h3>
+      <RenderParentComponent />
+      <h3>--------------------------------React Rending using object useState-------------------------------------------------------------</h3>
+      <ObjectUseState />
+      {/* <h3>--------------------------------Custom Hooks-------------------------------------------------------------</h3>
+      <CounterOneComp />
+      <CounterTwoComp />
+      <h3>--------------------------------UseMemo Hooks-------------------------------------------------------------</h3>
+      <UseMemoComp />
       <h3>----------------------Fetch Data with Hooks-------------------------------------------------------------</h3>
       <DataFetchingComp />
       <h3>----------------------UseContext with UseReducer Hook-------------------------------------------------------------</h3>
@@ -71,7 +86,7 @@ function App() {
       <h3>----------------------------Event Binding------------------------------------------------------</h3>
       <EventBind/>
       <h3>----------------------------Parent-Child Relation----------------------------------------------</h3>
-      <ParentComponent/>
+      <ParentComponent/> */}
     </div>
   );
 }
