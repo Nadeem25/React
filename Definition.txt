@@ -85,7 +85,14 @@ Types of Hooks
   ============= Dont Do This ====================================
   Point 2: There is no need to wrap child component with React momo if child component itself has children component.
   Point 3: If parent component has object or function and wrapping one of its child component with React.memo (Passing object or function as props to child comp) so it is incorrect of memoization.
-  
+
+8.6. Rendering with Context
+  Point 1: If we have Parent and child component A --> B-->C, I want to pass value from Parent to Child C, so I will use context but the Child A and B Component will also re-render.
+    To optimize this, I will memoized component A. As a result, when I will pass the value from Parent to Child C component using context then only Parent and Child C component will re-render.
+
+8.7. Rendering with Same Element Reference
+  Point 1: If we have App, Parent and child component A --> B-->C, I want to pass value from Parent to Child C, so I will use context but the Child A and B Component will also re-render.
+  To optimize this, I will pass child A component as props to Parent component and Place same element inside contex Provider. As a result, when I will change the state in Parent component and using context Child C component will get that value then only Parent and Child C component will re-render
 
 
 

@@ -26,6 +26,9 @@ import CounterOneComp from './components/Hooks/CustomHook/CounterOneComp';
 import CounterTwoComp from './components/Hooks/CustomHook/CounterTwoComp';
 import ObjectUseState from './components/React-Rendering/ObjectUseState';
 import RenderParentComponent from './components/React-Rendering/Parent-Child/RenderParentComponent';
+import ContextParentComp from './components/React-Rendering/Context/ContextParentComp';
+import ContextSameElementRefComp from './components/React-Rendering/Context-SameElementRef/ContextSameElementRefComp';
+import { ChildA } from './components/React-Rendering/Context-SameElementRef/ContextSameEleRefChildrenComp';
 
 
 export const UserContext = React.createContext()
@@ -35,6 +38,12 @@ function App() {
   //console.log(`Inside in App Component`);
   return (
     <div className="App">
+      <h3>--------------------------------React Rending using Context-Same Element Ref-------------------------------------------------------------</h3>
+        <ContextSameElementRefComp>
+          <ChildA></ChildA>
+        </ContextSameElementRefComp>
+      <h3>--------------------------------React Rending using Context-------------------------------------------------------------</h3>
+        <ContextParentComp />
       <h3>--------------------------------React Rending using Parent-Child-------------------------------------------------------------</h3>
       <RenderParentComponent />
       <h3>--------------------------------React Rending using object useState-------------------------------------------------------------</h3>
