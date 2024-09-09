@@ -29,6 +29,15 @@ import RenderParentComponent from './components/React-Rendering/Parent-Child/Ren
 import ContextParentComp from './components/React-Rendering/Context/ContextParentComp';
 import ContextSameElementRefComp from './components/React-Rendering/Context-SameElementRef/ContextSameElementRefComp';
 import { ChildA } from './components/React-Rendering/Context-SameElementRef/ContextSameEleRefChildrenComp';
+import { Routes, Route } from 'react-router-dom'
+import Home from './components/Ruouter/Home';
+import About from './components/Ruouter/About';
+import OrderSummary from './components/Ruouter/OrderSummary';
+import Navbar from './components/Ruouter/Navbar';
+import Profile from './components/Ruouter/Profile';
+import { AuthProvider } from './components/Ruouter/auth';
+import Login from './components/Ruouter/Login';
+import RequireAuth from './components/Ruouter/RequireAuth';
 
 
 export const UserContext = React.createContext()
@@ -38,12 +47,23 @@ function App() {
   //console.log(`Inside in App Component`);
   return (
     <div className="App">
+      <AuthProvider>
+      <h3>----------------------------------------------------Router------------------------------------------------------------------------------</h3>
+        <Navbar />
+        <Routes>
+          <Route path='/' element={<Home />}></Route>
+          <Route path='about' element={<About />}></Route>
+          <Route path='order-summary' element={<OrderSummary />}></Route>
+          <Route path='profile' element={<RequireAuth><Profile /></RequireAuth>}></Route>
+          <Route path='login' element={<Login/>}></Route>
+        </Routes>
+      </AuthProvider>
       <h3>--------------------------------React Rending using Context-Same Element Ref-------------------------------------------------------------</h3>
-        <ContextSameElementRefComp>
-          <ChildA></ChildA>
-        </ContextSameElementRefComp>
+      <ContextSameElementRefComp>
+        <ChildA></ChildA>
+      </ContextSameElementRefComp>
       <h3>--------------------------------React Rending using Context-------------------------------------------------------------</h3>
-        <ContextParentComp />
+      <ContextParentComp />
       <h3>--------------------------------React Rending using Parent-Child-------------------------------------------------------------</h3>
       <RenderParentComponent />
       <h3>--------------------------------React Rending using object useState-------------------------------------------------------------</h3>
