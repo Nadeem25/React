@@ -1,5 +1,10 @@
 import React from 'react'
 
+
+// Higher Order Component: It is pattern where function takes component as an argument and returns a new component
+// const newComponent = higherOrderComponent(originalComponent)
+// It is use to share common functionality
+
 const counter = (WrappedComponent) => {
   class Counter extends React.Component {
 
