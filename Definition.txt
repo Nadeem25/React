@@ -5,10 +5,29 @@ Open source library for building User Interface.
 --> It has Component Base Architecture
 --> It is declarative: Tell react what we want and it will build actual UI.
 
+1.1. Create and execute react Application
+ --- npx create-react-app <<application-name>>
+ --- npm start
+
 
 2. Component: It describe the part of the UI.
+
     1. Stateless Function Component: Javascript function which return HTML that describe UI.
+    1.1.functiona welcome(props) {
+      return <h1> Hello {props.name} </h1>
+    }
+    1.2. Input(Props) ------------> Functional Components --------------> Output(HTML(JSX))
+
     2. Stateful Class Component: Class extend Component Class and render method returns HTML.
+    2.1. class Welcome extends React.Component {
+      render() {
+         return <h1> Hello {this.props.name} </h1>
+      }
+    }
+    2.2. -- Input(Props) ------------> Class --------------> Output(HTML(JSX))
+    Note: Class also maintaine a private internal state i.e it can maintaine some information which is private to that component
+    and use that information to describe UI
+
 
 3. Higher Order Component
 We use Higher Order Component to share common functionality between component
@@ -16,13 +35,19 @@ HOC: Function takes component as an argument and returns a new call.
 const newComponent = higherOrderComponent(originalComponetn)
 Eg. const IronMan = withSuit(TonyStark)
 
-
 4. render props: We use render props to share common functionaliy and props between components.
 
 5. Context: It provides a way to pass data through the components tree without having to pass props down manually at entry level.
   step 1: Create Context
   step 2: Provide a context value
   step 3: Consume the context value
+
+
+
+------------------------------Hooks -------------------------------
+Definition: It allow us to use react features without having to write a class.
+Eg: state of component
+
 
 6. Rules Of Hook
 --> Only call Hooks at the Top Level
@@ -38,9 +63,12 @@ Call them from within React Functional Components and not just any regular javas
 4. 1st element is the current value of state and 2nd element is state setter function.
 
 Types of Hooks
-1. useState
-2. UseEffect
-3. UseContext
+1. useState : It use to manage state inside Functional Component
+2. UseEffect: It is use to perform side effect in Functional Component. 
+              It is use to execute after every re-rendering. 
+              We can execute useEffect only one time.
+              We can use hook useEffect to clean up.
+3. UseContext : It is use to pass the data through the component tree (sub Component) without having to pass props manually to every level.
 4. UseReducer
 5. useMemo
 6. useRef

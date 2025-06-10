@@ -1,5 +1,7 @@
 import React, { useMemo, useRef, useState } from 'react'
 
+// useMemo() : It memoizes a computed value, recalculating it only when dependencies change.
+
 function UseMemoComp() {
     const [countByOne, setCountByOne] = useState(0);
     const [countByTwo, setCountByTwo] = useState(0)

@@ -7,7 +7,7 @@
 // 3. Unmounting: When a component is being removed from the DOM.
 // Methods: componentWillUnmount()
 
-// 4. Error Handling: When there is an error during rendering in a lifecycle method, or in the constructor of any child component.
+// 4. Error Handling: When there is an error during rendering, in a lifecycle method, or in the constructor of any child component.
 // Methods: static getDerivedStateFromError() and componentDidCatch()
 
 import React, { Component } from 'react'

@@ -1,8 +1,14 @@
 // What is UseEffect Hook
 // 1. It is close replacement for componentDidMount componentDidUpdate and componentWillUnmount.
+// 2. useEffect performs side effects like API calls, timers, subscriptions.
 
 // Dependency Array List: It is way to let react know about everything that the effect must watch for changes.
 //It is not a way to specify when you want to re-run the effect.
+
+// useEffect(() => {
+//   // effect logic here
+//   return () => { /* cleanup */ }
+// }, [dependencies]);
 
 import React, { useState, useEffect } from 'react'
 

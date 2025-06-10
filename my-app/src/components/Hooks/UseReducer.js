@@ -2,6 +2,10 @@ import React, { useReducer } from 'react'
 
 const initialStateValue = 0;
 
+// UseReducer : it is reducer function to use for state management based on action
+// UserReducer(reducer, initialState) 
+// [currentState, action] = reducer(currentState, action)
+
 // Step 2. Create reducer function which is the parameter of userReducer function
 const reducer = (stateValue, action) => {
     switch(action.type) {

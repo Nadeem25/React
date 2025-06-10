@@ -6,14 +6,14 @@ import ClassComp from './components/ClassComponent';
 import State from "./components/State"
 import EventHandling from './components/EventHandling';
 import EventBind from './components/EventBind';
-import ParentComponent from './components/ParentComponent';
+//import ParentComponent from './components/ParentComponent';
 import ConditionalRendering from './components/ConditionalRendering';
 import FormComponent from './components/FormComponent';
 import LifecycleMethods from './components/LifecycleMethodsA';
 import ClickCounterComp from './components/Higer Order/ClickCounterComp';
 import HoverCounterComp from './components/Higer Order/HoverCounterComp';
-import { UserProvider } from './components/Context/userContext';
-import ComponentA from './components/Context/ComponentA';
+import { UserProvider } from './components/Hooks/Context/userContext';
+import ComponentA from './components/Hooks/Context/ComponentA';
 import HookCounter from './components/Hooks/UseStateHook';
 import UseEffectHook from './components/Hooks/UseEffectHook';
 import IntervalHookCounter from './components/Hooks/IntervalHookCounter';
@@ -38,6 +38,9 @@ import Profile from './components/Ruouter/Profile';
 import { AuthProvider } from './components/Ruouter/auth';
 import Login from './components/Ruouter/Login';
 import RequireAuth from './components/Ruouter/RequireAuth';
+import Greet from './components/Greet';
+import UseRefs from './components/Hooks/UseRefs';
+import UseCallbackComp from './components/Hooks/UseCallback/UseCallbackComp';
 
 
 export const UserContext = React.createContext()
@@ -47,7 +50,14 @@ function App() {
   //console.log(`Inside in App Component`);
   return (
     <div className="App">
-      <AuthProvider>
+      <h3>----------------------------Functional Component-----------------------------------------------</h3>
+      {/* <FunctionComp name="Nadeem"/> */}
+      <UseCallbackComp></UseCallbackComp>
+      {/* <UseRefs></UseRefs> */}
+      <h3>----------------------------Class Component----------------------------------------------------</h3>
+      {/* <ClassComp name="Nadeem" /> */}
+
+      {/* <AuthProvider>
       <h3>----------------------------------------------------Router------------------------------------------------------------------------------</h3>
         <Navbar />
         <Routes>
@@ -58,16 +68,16 @@ function App() {
           <Route path='login' element={<Login/>}></Route>
         </Routes>
       </AuthProvider>
-      <h3>--------------------------------React Rending using Context-Same Element Ref-------------------------------------------------------------</h3>
-      <ContextSameElementRefComp>
+      <h3>--------------------------------React Rending using Context-Same Element Ref-------------------------------------------------------------</h3> */}
+      {/* <ContextSameElementRefComp>
         <ChildA></ChildA>
-      </ContextSameElementRefComp>
-      <h3>--------------------------------React Rending using Context-------------------------------------------------------------</h3>
+      </ContextSameElementRefComp> */}
+      {/* <h3>--------------------------------React Rending using Context-------------------------------------------------------------</h3>
       <ContextParentComp />
       <h3>--------------------------------React Rending using Parent-Child-------------------------------------------------------------</h3>
       <RenderParentComponent />
       <h3>--------------------------------React Rending using object useState-------------------------------------------------------------</h3>
-      <ObjectUseState />
+      <ObjectUseState /> */}
       {/* <h3>--------------------------------Custom Hooks-------------------------------------------------------------</h3>
       <CounterOneComp />
       <CounterTwoComp />
@@ -106,10 +116,6 @@ function App() {
       <ConditionalRendering/>
       <h3>--------------------------------State----------------------------------------------------------</h3>
       <State />
-      <h3>----------------------------Functional Component-----------------------------------------------</h3>
-      <FunctionComp name="Nadeem"/>
-      <h3>----------------------------Class Component----------------------------------------------------</h3>
-      <ClassComp name="Nadeem" />
       <h3>----------------------------Event Handling-----------------------------------------------------</h3>
       <EventHandling/>
       <h3>----------------------------Event Binding------------------------------------------------------</h3>
